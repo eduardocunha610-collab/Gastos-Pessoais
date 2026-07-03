@@ -1,0 +1,39 @@
+{
+  "name": "Gastos Pessoais",
+  "short_name": "Gastos",
+  "description": "Controle financeiro pessoal",
+  "id": "com.eduardo.gastospessoais",
+  "start_url": "/Gastos-Pessoais/",
+  "scope": "/Gastos-Pessoais/",
+  "display": "standalone",
+  "background_color": "#0d0f14",
+  "theme_color": "#0f3060",
+  "orientation": "portrait-primary",
+  "categories": ["finance", "productivity"],
+  "icons": [
+    {
+      "src": "https://eduardocunha610-collab.github.io/Gastos-Pessoais/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://eduardocunha610-collab.github.io/Gastos-Pessoais/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://eduardocunha610-collab.github.io/Gastos-Pessoais/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://eduardocunha610-collab.github.io/Gastos-Pessoais/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
