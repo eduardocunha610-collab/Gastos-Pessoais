@@ -1,0 +1,24 @@
+name: Lembrete de Contas - Gastos Pessoais
+
+on:
+  workflow_dispatch: {} # disparado externamente pelo cron-job.org, duas vezes ao dia
+
+jobs:
+  enviar-lembrete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rodar script de lembretes de contas
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+        run: node scripts/enviar-lembretes-contas.js
